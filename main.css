@@ -21,10 +21,10 @@ body {
 .moon {
     position: absolute;
     top: 0;
-    left: 23%;
+    left: 58%;
     border-radius: 10vh;
-    width: 10vh;
-    height: 10vh;
+    width: 13vh;
+    height: 13vh;
     transform: translateZ(-2px);
     background-color: lightgoldenrodyellow;
 }
@@ -41,22 +41,63 @@ body {
 .house {
     flex: 0 0 auto;
     background-color: black;
+    position: relative;
+}
+
+.windowContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh;
+}
+.window {
+    flex: 0 1 3vh;
+    position: relative;
+}
+.window:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(0deg, black, black 10px, transparent 10px, transparent 11px, black 11px),
+    repeating-linear-gradient(90deg, black, black 8px, transparent 8px, transparent 16px, black 16px);
+    transition: 1s bottom;
+}
+.window:hover:before {
+    bottom: 100%;
+}
+
+.window img {
+    max-width: 15vh;
 }
 
 .house1 {
     height: 60vh;
     width: 45vh;
 }
-.house1:after{
+.house1:before{
     content: "";
     display: block;
     position: relative;
     top: -30vh;
+    left: 0;
+    right: 0;
     border: 15vh solid transparent;
-    border-bottom-color: black; 
+    border-bottom-color: black;
     height: 0;
     width: 15vh;
+    flex: 0 0 auto;
 }
+
 
 .house2 {
     margin-left: 5vh;
