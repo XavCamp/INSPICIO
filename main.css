@@ -36,6 +36,7 @@ body {
     display: flex;
     align-items: flex-end;
     transform: translateZ(0);
+    padding-right: 5vh;
 }
 
 .house {
@@ -68,8 +69,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: repeating-linear-gradient(0deg, black, black 10px, transparent 10px, transparent 11px, black 11px),
-    repeating-linear-gradient(90deg, black, black 8px, transparent 8px, transparent 16px, black 16px);
+    background: repeating-linear-gradient(0deg, black, black 15px, transparent 15px, transparent 16px, black 16px),
+    repeating-linear-gradient(90deg, black, black 8px, transparent 8px, transparent 10px, black 10px);
     transition: 1s bottom;
 }
 .window:hover:before {
@@ -83,7 +84,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(0deg, black, transparent 10%, transparent 90%, black 100%),     linear-gradient(90deg, black, transparent 10%, transparent 90%, black 100%);
+    background: linear-gradient(0deg, black, transparent 10%, transparent 90%, black 100%),
+    linear-gradient(90deg, black, transparent 10%, transparent 90%, black 100%);
 }
 
 .window img {
@@ -130,4 +132,15 @@ body {
     margin-left: 15vh;
     height: 90vh;
     width: 60vh;
+}
+
+.house4 {
+    margin-left: 10vh;
+    height: 80vh;
+    width: 60vh;
+}
+
+.interHouse {
+    height: 30vh;
+    width: 15vh;
 }
