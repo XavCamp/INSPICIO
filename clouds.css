@@ -1,0 +1,57 @@
+/**
+ * Clouds
+ */
+.cloud {
+  position: absolute;
+  width: 30vh;
+  fill: white;
+}
+.cloud:nth-of-type(1) {
+    left: 10vh;
+    top: 2vh;
+}
+.cloud:nth-of-type(2) {
+    left: 30vh;
+    top: 10vh;
+}
+.cloud:nth-of-type(3) {
+    left: 50vh;
+    top: 1vh;
+}
+.cloud:nth-of-type(4) {
+    left: 80vh;
+    top: 15vh;
+}
+.cloud:nth-of-type(5) {
+    left: 100vh;
+    top: 10vh;
+}
+
+.cloud.front {
+  transform: translateZ(-1px);
+}
+
+.cloud.distant {
+  transform: translateZ(-2px);
+}
+
+.cloud.background {
+  transform: translateZ(-3px);
+}
+
+/*Cloud Sizing*/
+.cloud.smaller {
+  width: 15vh;
+}
+
+.cloud.small {
+  width: 20vh;
+}
+
+.cloud.big {
+  width: 40vh;
+}
+
+.cloud.massive {
+  width: 50vh;
+}

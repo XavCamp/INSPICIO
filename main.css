@@ -20,7 +20,7 @@ body {
 
 .moon {
     position: absolute;
-    top: 0;
+    top: -10vh;
     left: 58%;
     border-radius: 10vh;
     width: 13vh;
@@ -75,13 +75,20 @@ body {
 .window:hover:before {
     bottom: 100%;
 }
+.window:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, black, transparent 10%, transparent 90%, black 100%),     linear-gradient(90deg, black, transparent 10%, transparent 90%, black 100%);
+}
 
 .window img {
     max-width: 15vh;
     max-height: 25vh;
-    /* outline: 10px solid rgba(0, 0, 0, .75); */
-    /* outline-offset: -10px; */
-    /* background-color: black; */
 }
 
 .house1 {

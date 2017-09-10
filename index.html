@@ -4,10 +4,39 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Windows in the night</title>
         <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="clouds.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <svg style="display: none">
+            <symbol id="cloud">
+                <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+            c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+            C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+            S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+            </symbol>
+            </svg>
         <div class="wrapper">
             <div class="moon"></div>
+
+            <svg width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud big front">
+                <use xlink:href="#cloud"></use>
+            </svg>
+            <svg width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant smaller">
+                <use xlink:href="#cloud"></use>
+            </svg>
+
+            <svg width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud small">
+                <use xlink:href="#cloud"></use>
+            </svg>
+
+            <svg width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant massive">
+                <use xlink:href="#cloud"></use>
+            </svg>
+
+            <svg width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud">
+                <use xlink:href="#cloud"></use>
+            </svg>
+            
             <div class="houseContainer">
                 <div class="house house1">
                     <div class="windowContainer">
@@ -30,7 +59,8 @@
                         <div class="window">
                             <img src="images/5.jpg">
                         </div>
-                    </div></div>
+                    </div>
+                </div>
                 <div class="house house3">
                     <div class="windowContainer">
                         <div class="window">
@@ -57,7 +87,8 @@
                         <div class="window">
                             <img src="images/13.jpg">
                         </div>
-                    </div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
