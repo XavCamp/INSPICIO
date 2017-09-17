@@ -5,7 +5,7 @@
   position: absolute;
   width: 30vh;
   fill: white;
-  fill-opacity: 0.9;
+  fill-opacity: 0.1;
 }
 .cloud:nth-of-type(1) {
     left: 10vh;
