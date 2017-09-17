@@ -5,30 +5,41 @@ body {
 
 body {
     margin: 0;
-    background-color: darkgrey;
-    /* background-image: url("images/background.png"); */
+    background-color: rgb(64, 64, 64);
+}
+
+div {
+    box-sizing: border-box;
 }
 
 .wrapper {
-    /* position: relative; */
+    position: relative;
     perspective: 5px;
     overflow-x: scroll;
     overflow-y: hidden;
-    transform-style: preserve-3d;
     height: 100vh;
-    /* width: 100%; */
+}
+
+.backgroundWrapper {
+    position: absolute;
+    height: 100vh;
+    /* scale = 1 + (translateZ * -1) / perspective */
+    transform: translateZ(-5px) scale(2);
+    width: 420vh;
+    overflow: hidden;
 }
 
 .nightBackground {
-    position: absolute;
-    top: -100vh;
-    left: -100vh;
-    right: 0;
-    bottom: 0;
-    min-height: 300vh;
+    /* position: absolute; */
+    /* top: 12vh; */
+    /* left: -100vh; */
+    /* right: 0; */
+    /* bottom: 0; */
+    height: 100vh;
     /* width: 100wh; */
-    /* width: 100%; */
-    transform: translateZ(-10px);
+    /* width: 440vh; */
+    /* scale = 1 + (translateZ * -1) / perspective */
+    /* transform: translateZ(-5px) scale(2); */
 }
 
 .moon {
@@ -43,40 +54,30 @@ body {
     background-color: lightgoldenrodyellow;
 }
 
-.moon {}
-
 .houseContainer {
     position: absolute;
-    left: 0;
     bottom: 0;
     display: flex;
     align-items: flex-end;
     transform: translateZ(0);
-    padding-right: 5vh;
+    padding-right: 15vh;
 }
 
 .house {
     flex: 0 0 auto;
     background-color: black;
     position: relative;
-}
-
-.windowContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 2vh;
 }
+
 .window {
     flex: 0 1 auto;
     position: relative;
 }
+/* Stores */
 .window:before {
     content: "";
     display: block;
@@ -92,6 +93,7 @@ body {
 .window:hover:before {
     bottom: 100%;
 }
+/* Fade around images */
 .window:after {
     content: "";
     display: block;
@@ -104,59 +106,313 @@ body {
     linear-gradient(90deg, black, transparent 10%, transparent 90%, black 100%);
 }
 
+.window,
 .window img {
     max-width: 15vh;
     max-height: 25vh;
 }
 
+
+/*********** HOUSE 1 ************/
 .house1 {
-    height: 60vh;
-    width: 45vh;
+    margin-left: 10vh;
+    height: 50vh;
+    width: 20vh;
+    align-items: flex-start;
 }
-.house1:before{
+.house1:before {
     content: "";
-    display: block;
-    position: relative;
-    top: -30vh;
-    left: 0;
-    right: 0;
+    position: absolute;
+    bottom: 0;
+    left: -3vh;
+    height: 5vh;
+    width: 3vh;
+    background-color: black;
+}
+.house1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5vh;
+    height: 12vh;
+    width: 5vh;
+    background-color: black;
+}
+.house1 .roof {
+    position: absolute;
+    top: -35vh;
+    left: -5vh;
     border: 15vh solid transparent;
-    border-bottom-color: black;
+    border-bottom: 25vh solid black;
     height: 0;
-    width: 15vh;
-    flex: 0 0 auto;
+    width: 0;
+}
+.house1 .roof:before {
+    content: "";
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    height: 10vh;
+    width: 2vh;
+    background-color: black;
+}
+.house1 .roof:after {
+    content: "";
+    position: absolute;
+    top: 4vh;
+    right: -7.5vh;
+    height: 1vh;
+    width: 3vh;
+    background-color: black;
 }
 
-
+/*********** HOUSE 2 ************/
 .house2 {
+    margin-left: 15vh;
+    height: 28vh;
+    width: 20vh;
+}
+
+/*********** HOUSE 3 ************/
+.house3 {
+    height: 50vh;
+    width: 35vh;
+    padding: 0 5vh;
+    flex-direction: column;
+}
+.house3:before {
+    content: "";
+    position: absolute;
+    top: -8vh;
+    right: 5.5vh;
+    height: 8vh;
+    width: 2vh;
+    background-color: black;
+}
+.house3:after {
+    content: "";
+    position: absolute;
+    top: -8vh;
+    right: 2vh;
+    height: 8vh;
+    width: 2vh;
+    background-color: black;
+}
+.window4 {
+    align-self: flex-end;
+}
+
+/*********** HOUSE 4 ************/
+.house4 {
     margin-left: 5vh;
-    height: 30vh;
+    height: 65vh;
+    width: 55vh;
+    background: linear-gradient(160deg, transparent 19vh, black 19vh);
+    padding-top: 20vh;
+}
+.house4:before {
+    content: "";
+    position: absolute;
+    top: 12vh;
+    left: 12.5vh;
+    height: 4vh;
+    width: 2vh;
+    background-color: black;
+}
+.house4:after {
+    content: "";
+    position: absolute;
+    top: 13vh;
+    left: 10vh;
+    height: 4vh;
+    width: 2vh;
+    background-color: black;
+}
+
+/*********** HOUSE 5 ************/
+.house5 {
+    margin-left: 10vh;
+    height: 35vh;
     width: 30vh;
 }
-.house2:after{
+.house5:after {
     content: "";
-    display: block;
-    position: relative;
+    position: absolute;
     top: -30vh;
-    border: 15vh solid transparent;
-    border-bottom-color: black; 
+    left: -5vh;
+    border: 20vh solid transparent;
+    border-bottom: 13vh solid black;
     height: 0;
     width: 0;
 }
 
-.house3 {
-    margin-left: 15vh;
-    height: 90vh;
-    width: 60vh;
-}
-
-.house4 {
-    margin-left: 10vh;
-    height: 80vh;
-    width: 60vh;
-}
-
-.interHouse {
+/*********** HOUSE 6 ************/
+.house6 {
     height: 30vh;
-    width: 15vh;
+    width: 20vh;
+    justify-content: flex-start;
+}
+
+/*********** HOUSE 7 ************/
+.house7 {
+    height: 60vh;
+    width: 30vh;
+    flex-direction: column;
+}
+.house7:before {
+    content: "";
+    position: absolute;
+    top: -3vh;
+    left: 5vh;
+    height: 3vh;
+    width: 2vh;
+    background-color: black;
+}
+.house7:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -8vh;
+    height: 30vh;
+    width: 8vh;
+    background-color: black;
+}
+
+
+/*********** HOUSE 8 ************/
+.house8 {
+    margin-left: 25vh;
+    height: 45vh;
+    width: 40vh;
+    align-items: flex-start;
+}
+.house8:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8vh;
+    height: 12vh;
+    width: 8vh;
+    background-color: black;
+}
+.house8:after {
+    content: "";
+    position: absolute;
+    top: -25vh;
+    left: -3vh;
+    border: 10vh solid transparent;
+    border-bottom: 15vh solid black;
+    border-left-width: 35vh;
+    height: 0;
+    width: 0;
+}
+
+/*********** HOUSE 9 ************/
+.house9 {
+    margin-left: 2vh;
+    height: 38vh;
+    width: 20vh;
+}
+
+/*********** HOUSE 10 ************/
+.house10 {
+    margin-left: 10vh;
+    height: 45vh;
+    width: 65vh;
+}
+.house10:after {
+    content: "";
+    position: absolute;
+    top: -65vh;
+    left: 0;
+    border: 35vh solid transparent;
+    border-bottom: 30vh solid black;
+    height: 0;
+    width: 0;
+    border-right-width: 30vh;
+}
+
+/*********** HOUSE 11 & 12 ************/
+.house11,
+.house12 {
+    height: 52vh;
+    width: 22vh;
+    flex-direction: column;
+    margin-left: 4vh;
+}
+.house11:before,
+.house12:before {
+    content: "";
+    position: absolute;
+    top: -8vh;
+    right: 5.5vh;
+    height: 8vh;
+    width: 2vh;
+    background-color: black;
+}
+
+/*********** HOUSE 13 ************/
+.house13 {
+    margin-left: 15vh;
+    height: 45vh;
+    width: 23vh;
+}
+.house13:after {
+    content: "";
+    position: absolute;
+    top: -16vh;
+    left: 0;
+    border: 6vh solid transparent;
+    border-bottom: 10vh solid black;
+    height: 0;
+    width: 0;
+    border-right-width: 17vh;
+}
+
+/*********** HOUSE 14 ************/
+.house14 {
+    height: 45vh;
+    width: 30vh;
+    background: linear-gradient(200deg, transparent 19vh, black 19vh);
+    padding-top: 18vh;
+    align-items: flex-start;
+}
+
+/*********** HOUSE 15 ************/
+.house15 {
+    margin-left: 45vh;
+    height: 50vh;
+    width: 20vh;
+    align-items: flex-start;
+}
+.house15:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -10vh;
+    height: 24vh;
+    width: 32vh;
+    background-color: black;
+}
+.house15 .roof {
+    position: absolute;
+    top: -22vh;
+    left: -2vh;
+    border: 8vh solid transparent;
+    border-bottom: 15vh solid black;
+    height: 0px;
+    width: 8vh;
+    box-sizing: content-box;
+}
+.house15 .roof:before,
+.house15 .roof:after {
+    content: "";
+    position: absolute;
+    top: -2vh;
+    height: 3vh;
+    width: 0.5vh;
+    background-color: black;
+}
+.house15 .roof:after {
+    right: 0;
 }
