@@ -23,7 +23,7 @@ div {
 .backgroundWrapper {
     position: absolute;
     height: 100vh;
-    width: 620vh;
+    width: 657vh;
     overflow: hidden;
 }
 
@@ -97,10 +97,13 @@ div {
     linear-gradient(90deg, black, transparent 10%, transparent 90%, black 100%);
 }
 
-.window,
-.window img {
+.window {
     max-width: 15vh;
     max-height: 25vh;
+}
+.window img {
+    max-width: inherit;
+    max-height: inherit;
 }
 
 
@@ -163,6 +166,9 @@ div {
     height: 28vh;
     width: 20vh;
 }
+.window2 {
+    max-height: 16vh;
+}
 
 /*********** HOUSE 3 ************/
 .house3 {
@@ -191,6 +197,7 @@ div {
 }
 .window4 {
     align-self: flex-end;
+    max-height: 10vh;
 }
 
 /*********** HOUSE 4 ************/
@@ -219,6 +226,10 @@ div {
     width: 2vh;
     background-color: black;
 }
+.window5,
+.window6 {
+    max-height: 14vh;
+}
 
 /*********** HOUSE 5 ************/
 .house5 {
@@ -236,12 +247,18 @@ div {
     height: 0;
     width: 0;
 }
+.window7 {
+    max-height: 17vh;
+}
 
 /*********** HOUSE 6 ************/
 .house6 {
     height: 30vh;
     width: 20vh;
     justify-content: flex-start;
+}
+.window8 {
+    max-height: 12vh;
 }
 
 /*********** HOUSE 7 ************/
@@ -267,6 +284,9 @@ div {
     height: 30vh;
     width: 8vh;
     background-color: black;
+}
+.window10 {
+    max-height: 12vh;
 }
 
 
@@ -297,12 +317,20 @@ div {
     height: 0;
     width: 0;
 }
+.window11 {
+    max-width: 30vh;
+}
 
 /*********** HOUSE 9 ************/
 .house9 {
     margin-left: 2vh;
     height: 38vh;
     width: 20vh;
+    flex-direction: column;
+}
+.window12,
+.window13 {
+    max-height: 12vh;
 }
 
 /*********** HOUSE 10 ************/
@@ -321,6 +349,13 @@ div {
     height: 0;
     width: 0;
     border-right-width: 30vh;
+}
+.window14,
+.window15 {
+    max-height: 17vh;
+}
+.window16 {
+    max-width: 23vh;
 }
 
 /*********** HOUSE 11 & 12 ************/
@@ -341,6 +376,16 @@ div {
     width: 2vh;
     background-color: black;
 }
+.house12 {
+    justify-content: flex-start;
+    padding-top: 9vh;
+}
+.window17 {
+    max-height: 15vh;
+}
+.window18 {
+    max-height: 17vh;
+}
 
 /*********** HOUSE 13 ************/
 .house13 {
@@ -359,14 +404,22 @@ div {
     width: 0;
     border-right-width: 17vh;
 }
+.window20,
+.window21 {
+    max-height: 15vh;
+}
 
 /*********** HOUSE 14 ************/
 .house14 {
     height: 45vh;
     width: 30vh;
     background: linear-gradient(200deg, transparent 19vh, black 19vh);
-    padding-top: 18vh;
+    padding-top: 22vh;
     align-items: flex-start;
+}
+.window22,
+.window23 {
+    max-height: 15vh;
 }
 
 /*********** HOUSE 15 ************/
@@ -374,7 +427,8 @@ div {
     margin-left: 45vh;
     height: 50vh;
     width: 20vh;
-    align-items: flex-start;
+    align-items: flex-end;
+    padding-bottom: 7vh;
 }
 .house15:before {
     content: "";
@@ -406,4 +460,20 @@ div {
 }
 .house15 .roof:after {
     right: 0;
+}
+.window24 {
+    max-width: 25vh;
+}
+
+/*********** HOUSE 16 ************/
+.house16 {
+    height: 36vh;
+    width: 33vh;
+    background: linear-gradient(155deg, transparent 11vh, black 11vh);
+    padding-top: 13vh;
+    align-items: flex-start;
+    margin-left: 12vh;
+}
+.window25 {
+    max-height: 11vh;
 }
