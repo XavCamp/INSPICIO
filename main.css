@@ -33,25 +33,12 @@ div {
     transform: translateZ(-5px) scale(2);
 }
 
-.moon {
-    position: absolute;
-    top: -10vh;
-    left: 58%;
-    border-radius: 10vh;
-    width: 13vh;
-    height: 13vh;
-    opacity: 0.2;
-    transform: translateZ(-5px);
-    background-color: lightgoldenrodyellow;
-}
-
 .houseContainer {
     position: absolute;
     bottom: 0;
     display: flex;
     align-items: flex-end;
     transform: translateZ(0);
-    padding-right: 15vh;
 }
 
 .house {
@@ -67,7 +54,14 @@ div {
 .window {
     flex: 0 1 auto;
     position: relative;
+    overflow: hidden;
+    transition: 1s transform;
 }
+.window:hover {
+    transform: scale(1.2);
+    transition-delay: 1.5s;
+}
+
 /* Stores */
 .window:before {
     content: "";
@@ -77,8 +71,7 @@ div {
     left: 0;
     right: 0;
     bottom: 0;
-    background: repeating-linear-gradient(0deg, black, black 15px, transparent 15px, transparent 16px, black 16px),
-    repeating-linear-gradient(90deg, black, black 8px, transparent 8px, transparent 10px, black 10px);
+    background: repeating-linear-gradient(0deg, black, black 12px, transparent 12px, transparent 15px, black 15px),     repeating-linear-gradient(90deg, black, black 8px, transparent 8px, transparent 14px, black 14px);
     transition: 1s bottom;
 }
 .window:hover:before {
